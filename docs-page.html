@@ -78,9 +78,9 @@
 
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-3"><span class="theme-icon-holder mr-2"><i class="fas fa-box"></i></span>Missing Values</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-1">Median Imputation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Random Sample Imputation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Mean Imputation</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Mode Imputation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-2">Mean Imputation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-3">Mode Imputation</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-4">Random Sample Imputation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-5">End of Distribution Imputation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-6">Arbitrary Value Imputation</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-3-7">Capture NAN Imputation</a></li>
@@ -93,7 +93,7 @@
 				    <li class="nav-item section-title mt-3"><a class="nav-link scrollto" href="#section-4"><span class="theme-icon-holder mr-2"><i class="fas fa-cogs"></i></span>Outliers</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-1">IQR</a></li>
 				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-2">Trimming</a></li>
-				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Floorig Capping</a></li>
+				    <li class="nav-item"><a class="nav-link scrollto" href="#item-4-3">Flooring Capping</a></li>
 				    
 
 
@@ -173,34 +173,37 @@
 				    <header class="docs-header">
 					    <h1 class="docs-heading">Missing Values</h1>
 					    <section class="docs-intro">
-						    <p>Section intro goes here. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque finibus condimentum nisl id vulputate. Praesent aliquet varius eros interdum suscipit. Donec eu purus sed nibh convallis bibendum quis vitae turpis. Duis vestibulum diam lorem, vitae dapibus nibh facilisis a. Fusce in malesuada odio.</p>
+						    <p>Datasets may have missing values, and this can cause problems for many machine learning algorithms. As such, it is good practice to identify and replace missing values for each column in your input data prior to modeling your prediction task. This is called missing data imputation, or imputing for short.</p>
 						</section><!--//docs-intro-->
 				    </header>
 				     <section class="docs-section" id="item-3-1">
 						<h2 class="section-heading">Median Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>Columns in the dataset which are having numeric continuous values can be replaced with the mean, median, or mode of remaining values in the column. This method can prevent the loss of data compared to the earlier method. Replacing the above two approximations (mean, median) is a statistical approach to handle the missing values.</p>
 					</section><!--//section-->
+					
 					
 					<section class="docs-section" id="item-3-2">
-						<h2 class="section-heading">Random Sample Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
-					</section><!--//section-->
-					
-					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Mean Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>Columns in the dataset which are having numeric continuous values can be replaced with the mean, median, or mode of remaining values in the column. This method can prevent the loss of data compared to the earlier method. Replacing the above two approximations (mean, median) is a statistical approach to handle the missing values.</p>
 					</section>
-					<section class="docs-section" id="item-3-4">
+
+					<section class="docs-section" id="item-3-3">
 						<h2 class="section-heading">Mode Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>Columns in the dataset which are having numeric continuous values can be replaced with the mean, median, or mode of remaining values in the column. This method can prevent the loss of data compared to the earlier method. Replacing the above two approximations (mean, median) is a statistical approach to handle the missing values.</p>
 					</section>
+
+					<section class="docs-section" id="item-3-4">
+						<h2 class="section-heading">Random Sample Imputation</h2>
+						<p>Random sampling imputation consists of extracting random observations from the pool of available values in the variable. Random sampling imputation preserves the original distribution, which differs from the other imputation techniques.</p>
+					</section>
+
 					<section class="docs-section" id="item-3-5">
 						<h2 class="section-heading">End Of Distribution Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>If there is suspicion that the missing value is not at random then capturing that information is important. In this scenario, one would want to replace missing data with values that are at the tails of the distribution of the variable.</p>
 					</section>
 					<section class="docs-section" id="item-3-6">
 						<h2 class="section-heading">Arbitrary Value Imputation</h2>
-						<p>Vivamus efficitur fringilla ullamcorper. Cras condimentum condimentum mauris, vitae facilisis leo. Aliquam sagittis purus nisi, at commodo augue convallis id. Sed interdum turpis quis felis bibendum imperdiet. Mauris pellentesque urna eu leo gravida iaculis. In fringilla odio in felis ultricies porttitor. Donec at purus libero. Vestibulum libero orci, commodo nec arcu sit amet, commodo sollicitudin est. Vestibulum ultricies malesuada tempor.</p>
+						<p>Arbitrary value imputation consists of replacing all occurrences of missing values within a variable by an arbitrary value. Ideally arbitrary value should be different from the median/mean/mode, and not within the normal values of the variable</p>
 					</section>
 					<section class="docs-section" id="item-3-7">
 						<h2 class="section-heading">Capture NAN Imputation</h2>
